@@ -1,0 +1,14 @@
+
+.before-after-container {
+  position: relative;
+  min-width: 50vw;
+  height: 100%;
+}
+
+.before-after-container > img {
+  position: relative;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  min-width: 50vw;
+}

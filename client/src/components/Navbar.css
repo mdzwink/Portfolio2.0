@@ -1,0 +1,254 @@
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 12vh;
+  min-height: 65px;
+  max-height: 90px;
+  padding: 0 3% 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--xanadu-grey);
+  box-shadow: 0 1px 5px rgb(9, 9, 9, .5);
+  z-index: 1000;
+  font-size: max(2vh, 1em);
+  font-weight: 600;
+}
+
+@supports (position: sticky){
+  header {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.navbar-logo {
+  width: 2em;
+  height: 2em;
+  font-size: x-large;
+  background-image: url('../../public/logo-elegant-closets.jpg');
+  background-size: cover;
+}
+
+.navbar-logo:hover {
+  cursor: pointer;
+}
+
+header nav {
+  height: 100%;
+}
+
+header nav ul {
+  list-style: none;
+  text-transform: capitalize;
+  height: 100%;
+}
+
+
+header nav ul li {
+  position: relative;
+  float: left;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul li a{
+  display: block;
+  padding: 0 2em;
+  color: white;
+  text-align: center;
+}
+
+header nav ul li:focus-within > ul,
+header nav ul li:hover {
+  background-color: var(--elegant-brown);
+  color: var(--eerie-black);
+  transition: background-color var(--button-animation-time), color var(--button-animation-time);
+  cursor: pointer;
+}
+
+header nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+header nav ul li ul li div {
+  padding: 0 .5em;
+}
+
+.link div {
+  color: var(--eerie-black);
+  background-color: var(--platinum);
+}
+
+.link {
+  background-size: cover;
+  background-position: center;
+  font-weight: 600;
+  color: var(--platinum);
+}
+.link:hover {
+  color: white;
+}
+.link-closet {
+  background-image: url('../../public/images/huy-nguyen-YhP-E5YwOGE-unsplash.jpg');
+}
+.link-office {
+  background-image: url('../../public/images/christian-mackie-lDlU1zbjGQA-unsplash.jpg');
+}
+.link-garage {
+  background-image: url('../../public/images/kevin-schmid-42MP7b-AJ-Q-unsplash.jpg');
+}
+.link-pantrie {
+  background-image: url('../../public/images/annie-spratt-EjDNFhbsAJc-unsplash.jpg');
+}
+.link-garage-floor {
+  background-image: url('../../public/garage-test-img.webp');
+}
+
+.link-contact {
+  display: flex;
+  flex-direction: row;
+}
+
+.link-contact > a {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+div.social-nav-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: var(--xanadu-grey);
+}
+
+.social-nav-container > a {
+  padding: 0 .8em;
+}
+
+.social-nav-in:hover {
+  cursor: pointer;
+  color: #743bad;
+}
+.social-nav-fb:hover {
+  cursor: pointer;
+  color: #1977f3;
+}
+.social-nav-pi:hover {
+  cursor: pointer;
+  color: #b7081b;
+}
+
+div.contact-popout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  padding: 1em;
+  opacity: 0;
+  transition: opacity 300ms, top 300ms, width 0ms, height 0ms;
+  transition-delay: 0ms, 0ms, 300ms, 300ms;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--xanadu-grey);
+  color: var(--eerie-black);
+  box-shadow: 0 5px 7px rgb(20, 20, 20, .5);
+  border-top: 1px solid rgb(10, 10, 10, .8);
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+}
+
+div.contact-popout.active {
+  opacity: 1;
+  top: 100%;
+  right: 0;
+  width: 30vw;
+  height: 50vh;
+  transition: opacity 300ms, top 300ms, width 0ms, height 0ms;
+  transition-delay: 1ms, 1ms, 0ms, 0ms;
+}
+
+div.contact-popout form {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 3px 3px;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.contact-popout form input{
+  width: 90%;
+  background-color: var(--platinum);
+  border: 1px solid var(--xanadu-grey);
+  border-radius: 2px;
+  font-weight: 300;
+  font-size: small;
+}
+div.contact-popout p {
+  margin: 1em;
+  border-bottom: 3px solid rgb(5, 5, 5, .8);
+}
+
+div.background-fade {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgb(10, 10, 10, .0);
+  transition: background-color 200ms, width 0s, height 0s;
+  transition-delay: 0ms, 200ms, 200ms;
+  z-index: -2;
+}
+
+div.background-fade.active {
+  position: absolute;
+  width: 100%;
+  height: 91vh;
+  background-color: rgb(10, 10, 10, .8);
+  transition: background-color 200ms, width 0s, height 0s;
+  transition-delay: 1ms, 0s, 0s;
+}
+div.background-fade:hover {
+  cursor: pointer;
+}
+
+
+nav ul li ul {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: none;
+  border-radius: 0 0 4px 4px;
+}
+
+header nav ul li ul li {
+  background-color: var(--xanadu-grey);
+  border-top: 1px solid rgb(0, 0, 0, 0.1);
+  width: 100%;
+  opacity: .8;
+}
+
+nav ul li ul > li:hover {
+  opacity: 1;
+}
+
+header nav ul li:hover > ul{
+  display: initial;
+}

@@ -1,0 +1,120 @@
+:root {
+  --elegant-brown: #8A5631;
+  --platinum: #E1E1DB;
+  --eerie-black: #191919;
+  --xanadu: #667761;
+  --xanadu-grey: #607466;
+  --button-animation-time: 0.3s;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Navbar rules in Navbar.css */
+
+
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--xanadu-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--platinum);
+}
+
+
+.get-a-quote {
+  position: fixed;
+  width: 120px;
+  height: 95px;
+  overflow: hidden;
+  left: 100vw;
+  top: 100vh;
+  translate: -120% -130%;
+  border-radius: 5px;
+  background-color: var(--elegant-brown);
+  transition: background-color var(--button-animation-time), color var(--button-animation-time);
+  padding: .5em;
+  animation: 1.5s infinite alternate throbing;
+  justify-items: center;
+  text-align: center;
+  color: var(--platinum);
+  font-size: medium;
+  font-weight: 200;
+  z-index: 999;
+}
+
+.get-a-quote:hover {
+  background-color: #3a404c;
+  color: white;
+  cursor: pointer;
+}
+
+.test-vid {
+  width: 100vw;
+  height: 600px;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--platinum);
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--xanadu);
+}
+
+.footer-container {
+  background-color: rgb(30, 30, 30);
+  color: var(--platinum);
+  position: relative;
+  min-height: 10em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 20em 20em;
+  grid-template-rows: 4em 4em;
+  
+}
+
+/* use grid?
+show copy right, certifications, links to contact, social, spaces, work for us,  */
+
+
+footer > img {
+  height: 100%;
+}
+
+
+@keyframes throbing {
+  from {
+    box-shadow: 1px 1px 9px 10px rgb(10, 10, 10, .3);
+  }
+
+  to {
+    box-shadow: 1px 1px 9px 10px rgb(10, 10, 10, .2);
+  }
+  
+}
