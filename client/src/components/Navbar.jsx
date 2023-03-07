@@ -1,21 +1,13 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import ContactForm from './ContactForm';
 
-const Navbar = () => {
-  const [contactPopout, setContactPopout] = useState(false);
-  
+const Navbar = (props) => {
+  const { handleContactPopoutToggle } = props;
+
   const scrollToTop = () => {
       window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-  }
-
-  const handleContactPopoutToggle = (e) => {
-    e.preventDefault()
-    contactPopout ? setContactPopout(false) : setContactPopout(true);
   }
 
   return (
@@ -29,12 +21,8 @@ const Navbar = () => {
             </ul>
           </li>
           <li className='link link-contact' onClick={(e) => handleContactPopoutToggle(e)}>Work with me <FontAwesomeIcon icon={faAngleDown} /></li>
-          <div className={contactPopout ? "contact-popout active" : "contact-popout"} >
-            <ContactForm setContactPopout={setContactPopout} />
-          </div>
         </ul>
       </nav>
-      <div className={contactPopout ? "background-fade active" : "background-fade"} onClick={(e) => handleContactPopoutToggle(e)}></div>
     </header>
   )
 }

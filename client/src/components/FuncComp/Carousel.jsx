@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Carousel.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Carousel = (props) => {
 
@@ -30,8 +32,8 @@ const Carousel = (props) => {
     <>
     <div className="carousel-container" style={{height: height, width: width}}>
       <div className="primary-carousel">
-        <div className="carousel-button prev" onClick={handlePrevImg}>{'<'}</div>
-        <div className="carousel-button next" onClick={handleNextImg}>{'>'}</div>
+        <div className="carousel-button prev" onClick={handlePrevImg}><FontAwesomeIcon icon={faAngleLeft} /></div>
+        <div className="carousel-button next" onClick={handleNextImg}><FontAwesomeIcon icon={faAngleRight} /></div>
         <ul>
           {imgArr.map((img, index) => {
             return <li key={index} className={index === currentImgI ? 'primary-slide active' : 'primary-slide'}>
