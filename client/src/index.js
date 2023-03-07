@@ -7,18 +7,10 @@ import {
 import './index.css';
 import App from './App';
 import ErrorPage from './ErrorPage';
-import Home from './components/Home-Page/Home'
-import About from './components/About/About';
-import Blog from './components/Blog/Blog';
-import Spaces from './components/Spaces/Spaces';
-import Contact from './components/Contact/Contact';
-import Process from './components/Process/Process';
-import Closet from './components/Spaces/Closet';
-import Office from './components/Spaces/Office';
-import Garage from './components/Spaces/Garage';
-import Pantrie from './components/Spaces/Pantrie';
-import GarageFloor from './components/Spaces/GarageFloor';
-import OtherSpace from './components/Spaces/OtherSpace';
+import Home from './components/Home-Page/Home';
+import Web from './components/MyWork/Web';
+import Imagery from './components/MyWork/Imagery';
+import Admin from './Admin/Admin';
 
 // import reportWebVitals from './reportWebVitals';
 
@@ -33,48 +25,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/about',
-        element: <About />
+        path: '/web-work',
+        element: <Web />
       },
       {
-        path: '/spaces',
-        element: <Spaces />,
+        path: '/imagery-work',
+        element: <Imagery />
       },
       {
-        path: '/spaces/closet',
-        element: <Closet />
-      },
-      {
-        path: '/spaces/office',
-        element: <Office />
-      },
-      {
-        path: '/spaces/garage',
-        element: <Garage />
-      },
-      {
-        path: '/spaces/pantrie',
-        element: <Pantrie />
-      },
-      {
-        path: '/spaces/garage-floor',
-        element: <GarageFloor />
-      },
-      {
-        path: '/spaces/other',
-        element: <OtherSpace />
-      },
-      {
-        path: '/process',
-        element: <Process />
-      },
-      {
-        path: '/blog',
-        element: <Blog/>
-      },
-      {
-        path: '/contact',
-        element: <Contact />
+        path: '/admin',
+        element: <Admin />
       },
     ]
   },

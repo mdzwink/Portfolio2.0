@@ -1,6 +1,6 @@
 import './Home.css';
 import Intro from "./Intro"
-import Carousel from '../Carousel';
+import Carousel from '../FuncComp/Carousel';
 const Home = () => {
 
   const homeMainImgArr = [

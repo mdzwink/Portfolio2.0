@@ -1,0 +1,39 @@
+form {
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  padding: 0 1.5em;
+}
+input {
+  margin: .5em;
+}
+.category {
+  display: flex;
+  flex-direction: row;
+  padding: 1.5em;
+}
+.web {
+  width: 50%;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #333;
+  color: white;
+}
+.web.active {
+  background-color: #eee;
+  color: black;
+}
+.imagery {
+  width: 50%;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #333;
+  color: white;
+}
+.imagery.active {
+  background-color: #eee;
+  color: black;
+}

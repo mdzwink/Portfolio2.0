@@ -19,6 +19,8 @@ header {
   header {
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -40,7 +42,6 @@ header nav {
 
 header nav ul {
   list-style: none;
-  text-transform: capitalize;
   height: 100%;
 }
 
@@ -52,6 +53,8 @@ header nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+  text-transform: capitalize;
 }
 
 header nav ul li a{
@@ -62,6 +65,7 @@ header nav ul li a{
 }
 
 header nav ul li:focus-within > ul,
+header nav ul li:active,
 header nav ul li:hover {
   background-color: var(--elegant-brown);
   color: var(--eerie-black);
@@ -74,20 +78,16 @@ header nav ul li ul {
   top: 100%;
   left: 0;
 }
-header nav ul li ul li div {
-  padding: 0 .5em;
-}
 
-.link div {
-  color: var(--eerie-black);
-  background-color: var(--platinum);
-}
+
+
 
 .link {
   background-size: cover;
   background-position: center;
   font-weight: 600;
   color: var(--platinum);
+  padding: 0 1em;
 }
 .link:hover {
   color: white;
@@ -103,9 +103,6 @@ header nav ul li ul li div {
 }
 .link-pantrie {
   background-image: url('../../public/images/annie-spratt-EjDNFhbsAJc-unsplash.jpg');
-}
-.link-garage-floor {
-  background-image: url('../../public/garage-test-img.webp');
 }
 
 .link-contact {
@@ -126,7 +123,7 @@ div.social-nav-container {
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  background-color: var(--xanadu-grey);
+  background-color: transparent;
 }
 
 .social-nav-container > a {
@@ -230,7 +227,7 @@ div.background-fade:hover {
 }
 
 
-nav ul li ul {
+nav ul li > ul {
   position: absolute;
   left: 0;
   width: 100%;
@@ -238,7 +235,7 @@ nav ul li ul {
   border-radius: 0 0 4px 4px;
 }
 
-header nav ul li ul li {
+header nav ul li > ul li {
   background-color: var(--xanadu-grey);
   border-top: 1px solid rgb(0, 0, 0, 0.1);
   width: 100%;

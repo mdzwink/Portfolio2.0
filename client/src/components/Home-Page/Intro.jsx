@@ -1,6 +1,4 @@
-import BeforeAfter from "./BeforAfter";
-
-
+import BeforeAfter from "../FuncComp/BeforAfter";
 
 const Intro = () => {
 
