@@ -100,11 +100,12 @@
   bottom: 1%;
   left: 10px;
   color: var(--platinum);
-  opacity: .6;
+  opacity: 0;
 }
 
 .collaps-secondary-carousel:hover {
   cursor: pointer;
+  opacity: .9;
 }
 
 /* secondary carousel END*/
@@ -120,10 +121,15 @@
   background: rgb(0, 0, 0, .4);
   color: var(--platinum);
   padding: 0 .5rem;
-  opacity: .7;
+  opacity: 0;
   font-size: 4rem;
   font-weight: 600;
   user-select: none;
+}
+
+.carousel-container:hover .carousel-button,
+.carousel-container:hover .collaps-secondary-carousel {
+  opacity: .7;
 }
 
 .carousel-button:hover,

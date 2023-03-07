@@ -21,7 +21,7 @@ const AddMediaForm =() => {
   }
   const submitNewMedia = (e) => {
     e.preventDefault()
-    console.log()
+    console.log(e.target.value)
     // validation/setError
     // POST
   }
