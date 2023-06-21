@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar'
-import GetAQuote from './components/GetAQuote';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
 import { useState } from 'react';
@@ -26,7 +25,6 @@ function App() {
       </div>
       </div>
       <Outlet />
-      <GetAQuote />
       <Footer />
     </div>
   );

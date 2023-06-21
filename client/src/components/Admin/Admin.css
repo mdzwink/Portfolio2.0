@@ -1,0 +1,14 @@
+.admin-banner {
+  height: 20vh;
+  background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
